@@ -1,0 +1,39 @@
+buildscript {
+    repositories {
+        maven { url "http://repo.spring.io/libs-snapshot" }
+        mavenLocal()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.0.RC2")
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url "http://repo.spring.io/libs-snapshot" }
+    maven { url "https://repository.jboss.org/nexus/content/repositories/releases" }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+
+
+jar {
+    baseName = 'flume-config-generator-poc'
+    version =  '0.0.1'
+}
+
+dependencies {
+    dependencies {
+        compile("org.springframework.boot:spring-boot-starter-web:1.0.0.RC2")
+        compile("com.fasterxml.jackson.core:jackson-databind")
+        compile("org.yaml:snakeyaml:1.13")
+        compile("org.springframework:spring-orm")
+        testCompile("junit:junit")
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
