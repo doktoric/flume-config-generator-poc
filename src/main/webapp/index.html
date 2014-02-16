@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" ng-app="awsApp">
+<head>
+    <meta charset="utf-8">
+    <title>flume configurator</title>
+    <script src="lib/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <script src="lib/angular-resource.js"></script>
+</head>
+
+<body class="bs-docs-home" style="" data-twttr-rendered="true" ng-controller="AwsConsoleController">
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="./" class="navbar-brand">Flume Configurator</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main class="bs-masthead" id="content" role="main">
+<div style="width: 90%;margin-left: auto;margin-right: auto;">
+
+<div class="row" style="height: 100px;"></div>
+
+<div class="row" ng-hide="signedIn">
+
+</div>
+
+<div class="view-container">
+    <div ng-view class="view-frame"></div>
+</div>
+
+
+</div>
+</main>
+
+</body>
+</html>
