@@ -22,9 +22,8 @@ public class DummyRestController {
 
     @RequestMapping(value = "/config", method = RequestMethod.POST)
     @ResponseBody
-    public String saveConfig(@RequestParam("flumeConfig") String flumeConfig,
-                             @RequestParam("morphlineConfig") String morphlineConfig,
-                             @RequestParam("user") String user) {
+    public String saveConfig(@RequestParam("company") String company, @RequestParam("morphline") String morphline,
+                             @RequestParam("sink") String sink, @RequestParam("source") String source) {
         return msg;
     };
 
