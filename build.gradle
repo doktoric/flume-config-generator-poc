@@ -30,6 +30,7 @@ dependencies {
         compile("com.fasterxml.jackson.core:jackson-databind")
         compile("org.yaml:snakeyaml:1.13")
         compile("org.springframework:spring-orm")
+        compile("com.google.guava:guava:r09")
         testCompile("junit:junit")
     }
 }

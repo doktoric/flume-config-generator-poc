@@ -6,15 +6,15 @@ var flumeControllers = angular.module('flumeControllers', []);
 
 flumeControllers.controller('FlumeController', ['$scope', '$http',
     function ($scope, $http) {
-        $scope.saveConfig = function (instanceId) {
+        $scope.saveConfig = function () {
             $http({
                 url: 'config',
                 method: "POST",
                 data: {
                     company: company.value,
-                    source: source.value,
+                    morphline: morphline.value,
                     sink: sink.value,
-                    morphline: morphline.value
+                    source: source.value
                 },
                 headers: {
                     'Content-Type': 'application/json'
